@@ -1,0 +1,233 @@
+.add-task-wrapper {
+  margin-bottom: 28px;
+}
+
+.add-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.add-trigger:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.plus-icon {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.add-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-input {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.18s;
+  background: #fafaf9;
+}
+
+[data-theme='dark'] .task-input {
+  background: #252523;
+  color: var(--text-primary);
+}
+
+.task-input:focus {
+  border-color: var(--accent);
+  background: white;
+}
+
+[data-theme='dark'] .task-input:focus {
+  background: #2c2c2a;
+}
+
+.task-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.selector-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.opt-btn {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: #f7f5f2;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+[data-theme='dark'] .opt-btn {
+  background: #252523;
+}
+
+.opt-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.opt-btn.selected {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.date-input {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  outline: none;
+  background: #fafaf9;
+  transition: all 0.15s;
+  width: 100%;
+  max-width: 200px;
+}
+
+[data-theme='dark'] .date-input {
+  background: #252523;
+  color: var(--text-primary);
+  color-scheme: dark;
+}
+
+.date-input:focus {
+  border-color: var(--accent);
+}
+
+.notes-input {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  background: #fafaf9;
+  transition: all 0.15s;
+  width: 100%;
+  resize: vertical;
+  min-height: 80px;
+}
+
+[data-theme='dark'] .notes-input {
+  background: #252523;
+  color: var(--text-primary);
+}
+
+.notes-input:focus {
+  border-color: var(--accent);
+  background: white;
+}
+
+[data-theme='dark'] .notes-input:focus {
+  background: #2c2c2a;
+}
+
+.notes-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.form-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.cancel-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cancel-btn:hover {
+  background: #f7f5f2;
+}
+
+[data-theme='dark'] .cancel-btn:hover {
+  background: #252523;
+}
+
+.submit-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 7px 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.submit-btn:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}

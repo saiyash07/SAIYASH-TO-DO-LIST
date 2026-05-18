@@ -1,0 +1,310 @@
+.task-card {
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  user-select: none;
+}
+
+.task-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.task-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.45;
+  flex: 1;
+}
+
+.todo-card {
+  background: #fafaf9;
+  border-color: var(--border);
+}
+
+[data-theme='dark'] .todo-card {
+  background: #1e1e1c;
+}
+
+.todo-card:hover {
+  background: #fff8e7;
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme='dark'] .todo-card:hover {
+  background: #2a2518;
+}
+
+.todo-card:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+.checkbox-ring {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #d1cfc9;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: border-color 0.2s;
+}
+
+[data-theme='dark'] .checkbox-ring {
+  border-color: #4a4844;
+}
+
+.todo-card:hover .checkbox-ring {
+  border-color: #f59e0b;
+}
+
+.done-card {
+  background: #f9fdf9;
+  border-color: #d1fae5;
+  cursor: default;
+  opacity: 0.85;
+}
+
+[data-theme='dark'] .done-card {
+  background: #151d16;
+  border-color: #1e3a24;
+}
+
+.done-card:hover {
+  opacity: 1;
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+[data-theme='dark'] .done-card:hover {
+  background: #1a2e1c;
+  border-color: #2d6a35;
+}
+
+.done-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.checkbox-checked {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.meta-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 28px;
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.date-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+[data-theme='dark'] .date-pill {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+  margin-left: 28px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+
+.action-row.visible {
+  max-height: 40px;
+  opacity: 1;
+}
+
+.action-btn {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.undo-btn {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+.undo-btn:hover { background: #c7d2fe; }
+
+[data-theme='dark'] .undo-btn {
+  background: #1e1b4b;
+  color: #a5b4fc;
+}
+[data-theme='dark'] .undo-btn:hover { background: #2e2a6e; }
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.delete-btn:hover { background: #fca5a5; }
+
+[data-theme='dark'] .delete-btn {
+  background: #2d1515;
+  color: #fca5a5;
+}
+[data-theme='dark'] .delete-btn:hover { background: #3f1818; }
+
+
+.snooze-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+.snooze-btn:hover { background: #e5e7eb; }
+
+[data-theme='dark'] .snooze-btn {
+  background: #374151;
+  color: #d1d5db;
+}
+[data-theme='dark'] .snooze-btn:hover { background: #4b5563; }
+
+
+.priority-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.notes-preview {
+  margin-left: 28px;
+  background: rgba(100, 120, 140, 0.05);
+  border-left: 2px solid #94a3b8;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+[data-theme='dark'] .notes-preview {
+  background: rgba(100, 120, 140, 0.15);
+  border-left-color: #64748b;
+}
+
+.notes-toggle {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+
+[data-theme='dark'] .notes-toggle {
+  color: #94a3b8;
+}
+
+.notes-toggle:hover {
+  color: #1e293b;
+}
+
+[data-theme='dark'] .notes-toggle:hover {
+  color: #cbd5e1;
+}
+
+.notes-content {
+  font-size: 0.8rem;
+  color: #475569;
+  margin-top: 6px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+[data-theme='dark'] .notes-content {
+  color: #cbd5e1;
+}
+
+.snoozed-card {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+[data-theme='dark'] .snoozed-card {
+  background: #1f1d2e;
+  border-color: #4c1d95;
+}
+
+.snoozed-card:hover {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+}
+
+[data-theme='dark'] .snoozed-card:hover {
+  background: #2d1f3f;
+  border-color: #7e22ce;
+}
+
+.unsnooze-btn {
+  background: #ddd6fe;
+  color: #5b21b6;
+}
+.unsnooze-btn:hover { background: #c4b5fd; }
+
+[data-theme='dark'] .unsnooze-btn {
+  background: #3d2764;
+  color: #d8b4fe;
+}
+[data-theme='dark'] .unsnooze-btn:hover { background: #4d3474; }
